@@ -9,4 +9,7 @@
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
+    <string name="next">Next</string>
+    <string name="welcome">Welcome</string>
+    <string name="filter_view_http">filter view http</string>
 </resources>

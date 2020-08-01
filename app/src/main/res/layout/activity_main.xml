@@ -7,29 +7,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etdob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:ems="10"
-        android:hint="@string/hint_id"
-        android:inputType="number"
-        android:autofillHints="" />
-
-    <Button
-        android:id="@+id/btnday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="15dp"
-        android:text="@string/whatistheday" />
-
     <TextView
-        android:id="@+id/tvresults"
+        android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="67dp"
         android:layout_margin="15dp"
+        android:background="#F6EBBC"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="@string/welcome"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btngoto"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="100dp"
+        android:text="@string/next" />
+
 </LinearLayout>
