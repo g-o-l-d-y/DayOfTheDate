@@ -35,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
                 year=Integer.parseInt(dob.substring(4,8));
 
                 yearcode=year%100;
-                yearcode=(yearcode+(yearcode/4))%7;
+                yearcode=(yearcode+(yearcode/4));
 
                 if(month==1 || month==10)
                     monthcode=0;
@@ -52,6 +52,18 @@ public class MainActivity2 extends AppCompatActivity {
                 else
                     monthcode=5;
 
+                if((year%4==0 && year%100!=0)||(year%400==0))
+                    leapyearcode=1;
+                else
+                    leapyearcode=0;
+
+                if(leapyearcode==1) {
+                    if (month == 1)
+                        monthcode = 6;
+                    else if (month == 2)
+                        monthcode = 2;
+                }
+
                 centurycode=year/100;
                 if((centurycode-1)%4==0)
                     centurycode=4;
@@ -62,13 +74,8 @@ public class MainActivity2 extends AppCompatActivity {
                 else
                     centurycode=6;
 
-                if((year%4==0 && year%100!=0)||(year%400==0))
-                    leapyearcode=1;
-                else
-                    leapyearcode=0;
-                day=(yearcode+monthcode+centurycode+day+leapyearcode)%7;
-                if(leapyearcode==1)
-                    day-=1;
+                day=(yearcode+monthcode+centurycode+day)%7;
+
                 if(day==0)
                     resultday=getString(R.string.sunday);
                 else if(day==1)
